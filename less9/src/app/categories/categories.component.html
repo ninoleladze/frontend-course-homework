@@ -1,0 +1,5 @@
+<ul>
+    @for (item of categories; track $index) {
+        <li (click)="changeCategory(item.id)">{{item.name}}</li>
+    }
+</ul>

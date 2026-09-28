@@ -1,0 +1,16 @@
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: brown;
+
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 20px 0 !important;
+}

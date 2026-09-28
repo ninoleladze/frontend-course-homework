@@ -1,0 +1,6 @@
+<p>home works!</p>
+
+
+@for (item of colorList; track $index) {
+    <button routerLink="/details/{{item}}" [style.backgroundColor]="item">{{item}}</button>
+}

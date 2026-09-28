@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Deluxe Twin Room",
+        "price": 299,
+        "image": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+        "description": "A luxurious twin room with modern amenities and a beautiful view."
+    },
+    {
+        "id": 2,
+        "name": "Luxury Suite",
+        "price": 450,
+        "image": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+        "description": "A spacious luxury suite with premium facilities and a king-size bed."
+    },
+    {
+        "id": 3,
+        "name": "Standard Room",
+        "price": 180,
+        "image": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg",
+        "description": "A comfortable standard room perfect for budget-friendly travelers."
+    }
+]

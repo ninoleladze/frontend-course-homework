@@ -1,0 +1,21 @@
+<section>
+    @for (item of cartList; track $index) {
+    <div class="card">
+        <div class="topArea">
+            <img [src]="item.product.image" alt="">
+            <h3 [style.backgroundColor]="item.product.spiciness > 2 ? 'red' : 'green' ">Spiciness: {{item.product.spiciness}}</h3>
+            <h4>{{item.price}}$</h4>
+        </div>
+        <div class="bottomArea">
+            <h3>{{item.product.name}}</h3>
+            <h6>Nuts: <i [style.color]="item.nuts ? 'green' : 'red' " class="fa-solid fa-{{item.nuts ? 'circle-check' : 'x'}}"></i></h6>
+            <h6>Vegeterian: <i [style.color]="item.vegeterian ? 'green' : 'red' " class="fa-solid fa-{{item.vegeterian ? 'circle-check' : 'x'}}"></i></h6>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci, modi.</p>
+            
+        </div>
+        
+    </div>
+
+    }
+
+</section>

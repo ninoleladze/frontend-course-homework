@@ -1,0 +1,24 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 40px;
+    background-color: darkolivegreen;
+    height: 70px;
+    align-items: center;
+    color: white;
+    font-family: "Bowlby One", sans-serif;
+    letter-spacing: 2px;
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-size: 25px;
+    font-family: monospace;
+    font-family: "Bowlby One", sans-serif;
+}

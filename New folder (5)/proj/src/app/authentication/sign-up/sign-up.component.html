@@ -1,0 +1,37 @@
+<form [formGroup]="form">
+    <label>First Name</label>
+    <input type="text" formControlName="firstName"><br>
+
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName"><br>
+
+    <label>Age</label>
+    <input type="number" formControlName="age"><br>
+
+    <label>Email</label>
+    <input type="text" formControlName="email"><br>
+
+    <label>Password</label>
+    <input type="password" formControlName="password"><br>
+
+    <label>Address</label>
+    <input type="text" formControlName="address"><br>
+
+    <label>Phone Number</label>
+    <input type="text" formControlName="phone"><br>
+
+    <label>Zipcode</label>
+    <input type="text" formControlName="zipcode"><br>
+
+    <label>Avatar</label>
+    <input type="text" formControlName="avatar"><br>
+
+    <label>Gender (MALE, FEMALE, OTHER)</label>
+    <input type="text" formControlName="gender"><br>
+
+    <button 
+    type="submit" 
+    [disabled]="form.invalid"
+    (click)="signUp()"
+    >Sign Up</button>
+</form>

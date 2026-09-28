@@ -1,0 +1,19 @@
+<form [formGroup]="loginFormInfo" (ngSubmit)="login()" class="signin-form">
+  <h2 class="form-title">Sign In</h2>
+  <div class="field">
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" id="email">
+    <small class="error-msg" *ngIf="loginFormInfo.get('email')?.invalid && loginFormInfo.get('email')?.touched">
+      Please enter a valid email address.
+    </small>
+  </div>
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" formControlName="password" id="password">
+    <small class="error-msg" *ngIf="loginFormInfo.get('password')?.invalid && loginFormInfo.get('password')?.touched">
+      Password must be at least 6 characters.
+    </small>
+  </div>
+  <div *ngIf="loginError" class="error-msg" style="text-align: center;">{{ loginError }}</div>
+  <button type="submit" class="btn-login" [disabled]="loginFormInfo.invalid">LOGIN</button>
+</form>

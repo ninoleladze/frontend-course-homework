@@ -1,0 +1,28 @@
+<!DOCTYPE html>  
+<html lang="ka">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>ონლაინ მაღაზია</title>  
+    <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+    <header>  
+        <h1>ონლაინ მაღაზია</h1>  
+        <input type="text" id="search" placeholder="ძებნა...">  
+        <button id="cart-btn">🛒 კალათა</button>  
+    </header>  
+    <aside id="filters">  
+        <h3>ფილტრები</h3>  
+        <label>კატეგორია: <select id="category-filter"></select></label>  
+        <label>ბრენდი: <select id="brand-filter"></select></label>  
+        <label>ფასი: <input type="range" id="price-filter" min="0" max="1000"></label>  
+        <label>რეიტინგი: <input type="number" id="rating-filter" min="1" max="5"></label>  
+        <button id="apply-filters">ფილტრის გამოყენება</button>  
+    </aside>  
+    <main id="products-container">  
+        <!-- პროდუქცია დატვირთება აქ -->  
+    </main>  
+    <script src="app.js"></script>  
+</body>  
+</html> 

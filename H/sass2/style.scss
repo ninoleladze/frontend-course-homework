@@ -1,0 +1,109 @@
+
+.container{
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+     img{
+    border-radius: 1000px;
+     }
+     .text{
+         display: flex;
+         flex-direction: column;
+         ]
+        
+     } 
+      
+
+     .box{
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+
+         a{
+             all:unset;
+         }
+
+         
+        
+       
+         .li1{
+             justify-content: center;
+             align-items: center;
+             display: flex;
+             width: 120px;
+             height: 120px;
+            background-color:#EEA302 ;
+            border-radius: 1000px;
+            border: 2px solid black;
+         }
+         .li2{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 120px;
+            height:120px;
+             background-color: #FF3B25;
+             border-radius: 1000px;
+             border: 2px solid black;
+             
+
+         }
+         .li5{
+            justify-content:center ;
+            align-items: center;
+            display: flex;
+            width: 120px;
+            height: 120px;
+             background-color: #80D8DA;
+             border-radius: 1000px;
+             border: 2px solid black;
+         }
+     }
+}
+@mixin li1 {
+    all: unset;
+    cursor: pointer;
+    
+}
+.li1{
+        @include li1;
+        &:hover{
+            background-color: rgb(112, 24, 24);
+            opacity: 0.5;
+            transition: 0.7s;
+        }
+    }
+    @mixin li1 {
+        all: unset;
+        cursor: pointer;
+        
+    }
+    .li2{
+            @include li2;
+            &:hover {
+                background-color: rgb(112, 24, 24);
+                opacity: 0.5;
+                transition: 0.7s;
+            }
+        }
+        @mixin li2{
+            all: unset;
+            cursor: pointer;
+            
+        }
+ .li5{
+            @include li5;
+            &:hover{
+                background-color: rgb(112, 24, 24);
+                opacity: 0.5;
+                transition: 0.7s;
+            }
+        }
+        @mixin li5{
+            all: unset;
+            cursor: pointer;
+            
+        }
+

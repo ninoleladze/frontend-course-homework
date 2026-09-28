@@ -1,0 +1,51 @@
+<!-- src/app/home/home.component.html -->
+<section class="fairy-home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hello, I'm <span class="highlight">Nino Leladze</span></h1>
+        <h2>Front-End Web Developer</h2>
+        <p>Creating magical web experiences with modern technologies</p>
+        <div class="hero-buttons">
+          <a routerLink="/projects" class="btn btn-primary">View My Work</a>
+          <a routerLink="/contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+        
+        
+      </div>
+      
+      <div class="hero-image float">
+        <div class="image-frame">
+          <img src="https://media.licdn.com/dms/image/v2/D4E03AQFPIixewOmZhg/profile-displayphoto-shrink_800_800/B4EZXiMpcbHMAc-/0/1743256722292?e=1749081600&v=beta&t=dY0P1TbMfhXVHrOjkL7LslTwcI9eyuJW1Iy4BQB33XU"
+               alt="Nino Leladze">
+          <div class="frame-decoration top-left"></div>
+          <div class="frame-decoration top-right"></div>
+          <div class="frame-decoration bottom-left"></div>
+          <div class="frame-decoration bottom-right"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skills-section">
+      <h3 class="section-subtitle">My Magical Skills</h3>
+      <div class="skills-container">
+        <div class="skill-card" *ngFor="let skill of skills">
+          <div class="skill-icon">
+            <i [class]="skill.icon"></i>
+          </div>
+          <h4>{{skill.title}}</h4>
+          <p>{{skill.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Magical elements -->
+  <div class="sparkles">
+    <div class="sparkle" *ngFor="let sparkle of sparkles" 
+         [style.top]="sparkle.top" 
+         [style.left]="sparkle.left" 
+         [style.animation-delay]="sparkle.delay">
+    </div>
+  </div>
+</section>

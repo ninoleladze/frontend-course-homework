@@ -1,0 +1,35 @@
+<p>home works!</p>
+
+
+<!-- <input type="text" [(ngModel)]="inputText">
+
+<h1>{{inputText}}</h1> -->
+<div class="filterArea">
+    <div class="spic">
+        <label for="">Spiciness: {{spiciness == "-1" ? "Not Chosen" : spiciness }}</label>
+        <input type="range" min="-1" max="4" [(ngModel)]="spiciness">
+    </div>
+    <div class="checks">
+    <input type="checkbox" [(ngModel)]="nuts">
+    <label for="">No Nuts</label>
+    </div>
+    <div class="checks">
+    <input type="checkbox" [(ngModel)]="vegeterian">
+    <label for="">Vegeterian Only</label>
+    </div>
+    <button (click)="reset()">RESET</button>
+    <button (click)="filterFoods()">APPLY FILTER</button>
+</div>
+
+<section>
+    @for (item of allFoods; track $index) {
+        <div class="card" style="width: 18rem;">
+            <img [src]="item.image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    }
+</section>

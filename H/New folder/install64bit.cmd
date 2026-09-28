@@ -1,0 +1,1 @@
+setup.exe /configure configuration-Office2024LTSC-x64.xml

@@ -1,0 +1,17 @@
+p {
+  color: blue;
+}
+h1 {
+  color: green;
+}
+.heading {
+  color: red;
+  background-color: bisque;
+}
+#unique {
+  color: rgb(219, 166, 87);
+  background-color: beige;
+}
+.mountain {
+  width: 500px;
+}

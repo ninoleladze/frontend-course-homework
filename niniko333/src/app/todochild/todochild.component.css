@@ -1,0 +1,61 @@
+.fairy-tale-container {
+  background: linear-gradient(to bottom, #ffe6f7, #ff99cc);
+  border: 3px solid #ff66b2;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  font-family: 'Pacifico', cursive, sans-serif;
+  color: #ff3385;
+  text-align: center;
+}
+
+.fairy-tale-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fairy-tale-item {
+  background: #ffe6f2;
+  border: 2px solid #ff99cc;
+  border-radius: 15px;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fairy-tale-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fairy-tale-text {
+  color: #cc0066;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fairy-tale-button {
+  background: #ff66b2;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.fairy-tale-button:hover {
+  background: #ff3385;
+  transform: scale(1.1);
+}
+
+.fairy-tale-button:active {
+  background: #cc0066;
+  transform: scale(0.95);
+}

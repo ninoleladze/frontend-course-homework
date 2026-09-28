@@ -1,0 +1,8 @@
+<div class="allArea" (click)="closeArea($event)">
+    <div class="signin">
+        <span (click)="close()">X</span>
+        <input type="email" placeholder="Your Email" [(ngModel)]="inputEmail">
+        <input type="password" placeholder="Your Password" [(ngModel)]="inputPassword">
+        <button (click)="login()">SIGN IN</button>
+    </div>
+</div>

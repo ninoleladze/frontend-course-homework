@@ -1,0 +1,5 @@
+<ul>
+   @for (item of childList; track $index) {
+    <li>{{item}}  <button (click)="removeData($index)">X</button></li>
+   }
+</ul>

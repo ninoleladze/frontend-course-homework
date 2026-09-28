@@ -1,0 +1,51 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #FE5F0A;
+  font-family: helvetica;
+}
+
+header h3 {
+  color: crimson;
+  font-size: 25px;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+header nav ul a {
+  all: unset;
+}
+
+button {
+  all: unset;
+  background-color: #ffad0a;
+  padding: 12px 20px;
+  cursor: pointer;
+  border: 2px solid grey;
+}
+
+button:hover {
+  background-color: grey;
+  opacity: 0.5;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+/*# sourceMappingURL=style.css.map */

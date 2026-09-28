@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="brand">
+      <a routerLink="/">MR CODER</a>
+    </div>
+    
+    <div class="menu-toggle" (click)="toggleMenu()">
+      <div class="hamburger">☰</div>
+    </div>
+    
+    <ul class="nav-menu" [ngClass]="{'active': isMenuOpen}">
+      <li class="nav-item">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/project" routerLinkActive="active">Project</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/blog" routerLinkActive="active">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/contact" routerLinkActive="active">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

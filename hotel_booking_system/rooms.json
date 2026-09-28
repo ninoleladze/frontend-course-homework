@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Deluxe Twin Room",
+        "price": 299,
+        "image": "room1.jpg",
+        "description": "A luxurious twin room with modern amenities and a beautiful view."
+    },
+    {
+        "id": 2,
+        "name": "Luxury Suite",
+        "price": 450,
+        "image": "room2.jpg",
+        "description": "A spacious luxury suite with premium facilities and a king-size bed."
+    },
+    {
+        "id": 3,
+        "name": "Standard Room",
+        "price": 180,
+        "image": "room3.jpg",
+        "description": "A comfortable standard room perfect for budget-friendly travelers."
+    }
+]

@@ -1,0 +1,88 @@
+<app-carousel></app-carousel>
+<app-informationside></app-informationside>
+<article>
+  <aside class="sidebar">
+    <app-filter (filterChanged)="onFilterChanged($event)"></app-filter>
+  </aside>
+  <section class="container">
+    <hr>
+    <main>
+      @for (item of products?.products ?? []; track item._id) {
+        <div class="card bounce-on-appear">
+          <div class="topArea">
+            <img [src]="item.thumbnail || item.image" [alt]="item.title || item.name">
+            <h4>{{item.brand | titlecase}}</h4>
+          </div>
+          <div class="bottomArea">
+            <h3>{{item.title || item.name}}</h3>
+            <div class="price-row">
+              <span class="current-price">${{item.price.current}}</span>
+              <span *ngIf="item.price.discountPercentage > 0" class="old-price">
+                ${{item.price.beforeDiscount}}
+              </span>
+              <span *ngIf="item.price.discountPercentage > 0" class="discount-badge">
+                -{{item.price.discountPercentage}}%
+              </span>
+            </div>
+            <div class="rating">
+              @for (star of [1,2,3,4,5]; track star) {
+                <span class="star" [class.filled]="item.rating >= star">★</span>
+              }
+              <span class="rating-number">{{item.rating | number:'1.1-1'}}</span>
+            </div>
+         
+         <p class="ess"> @if (item.stock <= 0) {
+  <h5 style="color:red;">
+    Not In Stock
+  </h5>
+} @else {
+  <h5 style="color:rgb(0, 255, 242);">
+    In Stock ({{ item.stock }})
+  </h5>}</p>  
+            <div class="card-actions">
+              <button class="bounce-on-hover" (click)="addToCart(item)">
+                <i class="fa fa-cart-plus"></i> Add To Cart
+              </button>
+              <a class="bounce-on-hover view-more-btn" [routerLink]="['/productdetails', item._id]">
+                <i class="fa fa-eye"></i> View More
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </main>
+    <div *ngIf="products && !products.products?.length" class="no-products">
+      <i class="fa fa-box-open"></i> No products found<span class="loader"></span>
+    </div>
+    <div class="bottomArea pagination-controls">
+      <span></span>
+      <div class="pages">
+        <button [disabled]="currentPage === 1" (click)="prevPage()" class="arrows">&larr; prev</button>
+        @for (item of pageList; track $index) {
+          <button
+            [class.current]="item == currentPage"
+            (click)="!isCategoryShown ? showProducts(item, pageSize) : showByCategory(currentCategory, item)">
+            {{ item }}
+          </button>
+        }
+        <button [disabled]="currentPage === pageList.length" (click)="nextPage()" class="arrows"> next &rarr;</button>
+      </div>
+      @if (products?.products?.length > 10) {
+        <div class="sizePerPage">
+          <label>Items per Page:</label>
+          <select (change)="changePageSize()" [(ngModel)]="pageSize">
+            <option value="">All</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+          </select>
+        </div>
+      }
+      @else { 
+        <span></span>
+      }
+    </div>
+  </section>
+</article>

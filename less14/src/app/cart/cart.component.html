@@ -1,0 +1,11 @@
+
+@for (item of cartList; track $index) {
+    <div class="cart">
+        <img width="30" [src]="item.product.image" alt="">
+        <h3>{{item.product.name}}</h3>
+        <h6> <button>+</button> {{item.quantity}} <button>-</button> </h6>
+        <p>{{item.product.price}}</p>
+        <p>{{item.product.price * item.quantity}}</p>
+        <button>Remove</button>
+    </div>
+}

@@ -1,0 +1,12 @@
+<section>
+    @for (item of rooms; track $index) {
+        <div class="card" style="width: 18rem;">
+            <img [src]="item.images[0].source" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a routerLink="/details/{{item.id}}" class="btn btn-primary">View Room</a>
+            </div>
+          </div>
+    }
+</section>

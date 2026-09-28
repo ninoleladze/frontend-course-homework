@@ -1,0 +1,96 @@
+.carousel{
+    bottom: 100px;
+    max-width: fit-content;
+    width: 600px;
+    height: 500px;
+  margin: 48px ;
+  padding: 50px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 24px rgba(25, 26, 73, 0.1);
+   display: flex;
+  flex-direction: column;
+  gap: 18px;
+transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Smoother transitions */
+
+  transform: rotateY(-14deg) scale(1.10);
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1), box-shadow 0.3s;
+  will-change: transform, box-shadow;
+  z-index: 2;
+  position: relative;
+  animation: floatImg 2.8s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 22px #4fd1ff55);
+}
+.btn-pink {
+  background-color: #4fd1ff;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(143, 167, 244, 0.4);
+}
+
+.btn-pink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(143, 204, 244, 0.6);
+  color: white;
+}
+
+.btn-pink:active {
+  transform: translateY(-1px);
+}
+
+.btn-outline-pink {
+  background-color: transparent;
+  border: 2px solid var(--primary-pink);
+  color: var(--primary-pink);
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-pink:hover {
+  background-color: var(--primary-pink);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(244, 143, 177, 0.4);
+}
+.class{
+    height: 91vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.xs{
+
+display: flex;
+ width: 600px;
+    height: 500px;
+    margin: 48px;
+  padding: 50px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 24px rgba(25, 26, 73, 0.1);
+   display: flex;
+   color: white;
+  flex-direction: column;
+  gap: 18px;
+transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Smoother transitions */
+
+
+
+}
+
+.carousel-caption{
+    color:white;
+}
+.carouselitem{
+    align-items: center;
+    display: flex;
+}
+@media (max-width: 768px) {
+    .carousel{
+        margin-top: 200px;
+    }
+}

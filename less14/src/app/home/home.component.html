@@ -1,0 +1,18 @@
+    <div class="btns">
+        @for (item of pageList; track $index) {
+            <button (click)="showAllProducts(item)">{{item}}</button>
+        }
+    </div>
+
+<section>
+    @for (item of products; track $index) {
+        <div class="card" style="width: 18rem;">
+            <img [src]="item.images[0]" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.title}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+    }
+</section>

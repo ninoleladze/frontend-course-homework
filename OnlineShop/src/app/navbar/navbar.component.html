@@ -1,0 +1,18 @@
+<nav class="custom-navbar">
+  <div class="navbar-brand-area">
+    <a class="navbar-brand" routerLink="/"> OnlineShop</a>
+  </div>
+  <ul class="navbar-links">
+    <li><a class="nav-home" routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a class="nav-cart" routerLink="/cart" routerLinkActive="active">Cart</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle nav-account" tabindex="0">Account <span>▼</span></a>
+      <ul class="dropdown-menu">
+        <li><a routerLink="/register">Register</a></li>
+        <li><a routerLink="/login">Login</a></li>
+        <li><hr></li>
+        <li><a routerLink="/profile">Profile</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

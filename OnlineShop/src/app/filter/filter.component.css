@@ -1,0 +1,90 @@
+.filter-rect {
+  background: rgba(25, 26, 73, 0.96);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px #191a4944, 0 0 0 1px #4fd1ff22;
+  padding: 2rem 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-width: 260px;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.filter-rect h2, .filter-rect h4 {
+  color: #4fd1ff;
+  margin-bottom: 0.5rem;
+}
+
+.filter-rect input,
+.filter-rect select {
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  border: 2px solid #4fd1ff;
+  background: #191a49;
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.brands{
+  color: white;
+  cursor: pointer;
+}
+.material-symbols-outlined{
+  color: white;
+  cursor: pointer;
+}
+.filter-btn {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #4fd1ff;
+  color: #191a49;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filter-btn:hover {
+  background: #191a49;
+  color: #4fd1ff;
+  border: 2px solid #4fd1ff;
+}
+
+.activedBrand {
+  font-weight: bold;
+  color: #4fd1ff;
+  background: #191a49;
+  border-radius: 0.5rem;
+}
+
+
+@media (max-width: 768px) {
+ .filter-rect {
+  background-color: #171528;
+  width: 700px;
+  height: 500px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+   flex-wrap: wrap;
+    margin: 48px;
+  padding: 50px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 24px rgba(25, 26, 73, 0.1);
+   display: flex;
+   color: white;
+  flex-direction: column;
+  gap: 18px;
+transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Smoother transitions */
+
+
+ }
+  
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Online Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">Online Store</a>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search products...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="header-right">
+                <div class="auth-links" id="auth-container">
+                    <a href="#" id="login-btn">Login</a>
+                    <a href="#" id="register-btn">Register</a>
+                </div>
+                
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>Loading product details...</p>
+            </div>
+            
+            <div id="product-not-found" class="error-message" style="display: none;">
+                <p>Product not found. <a href="../index.html">Return to home page</a></p>
+            </div>
+            
+            <div id="product-details" class="product-details" style="display: none;">
+                <div class="product-main">
+                    <div class="product-image-container">
+                        <img id="product-image" src="" alt="Product Image" class="product-image">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 id="product-name" class="product-name"></h1>
+                        
+                        <div class="product-meta">
+                            <div id="product-price" class="product-price"></div>
+                            <div class="product-rating">
+                                <div id="product-stars" class="stars"></div>
+                                <span id="product-rating-count" class="rating-count"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-specs">
+                            <div class="spec-item">
+                                <span class="spec-label">Brand:</span>
+                                <span id="product-brand" class="spec-value"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Release Date:</span>
+                                <span id="product-release-date" class="spec-value"></span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-label">Stock:</span>
+                                <span id="product-stock" class="spec-value"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <label for="quantity">Quantity:</label>
+                                <input type="number" id="quantity" min="1" value="1">
+                            </div>
+                            
+                            <button id="add-to-cart-btn" class="add-to-cart-btn">
+                                Add to Cart
+                            </button>
+                            
+                            <button id="rate-product-btn" class="rate-product-btn">
+                                Rate this Product
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-tabs">
+                    <div class="tabs-header">
+                        <button id="details-tab-btn" class="tab-btn active">Details</button>
+                        <button id="reviews-tab-btn" class="tab-btn">Reviews</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div id="details-tab" class="tab-pane active">
+                            <h3>Product Description</h3>
+                            <p id="product-description"></p>
+                            
+                            <div id="features-section">
+                                <h3>Features</h3>
+                                <ul id="product-features" class="features-list"></ul>
+                            </div>
+                        </div>
+                        
+                        <div id="reviews-tab" class="tab-pane">
+                            <h3>Customer Reviews</h3>
+                            <div id="reviews-container" class="reviews-list"></div>
+                            <div id="no-reviews" class="no-reviews" style="display: none;">
+                                <p>No reviews yet. Be the first to review this product!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="review-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Rate this Product</h2>
+            <form id="review-form">
+                <div class="form-group">
+                    <label>Your Rating</label>
+                    <div class="rating-input">
+                        <i class="fas fa-star" data-rating="1"></i>
+                        <i class="fas fa-star" data-rating="2"></i>
+                        <i class="fas fa-star" data-rating="3"></i>
+                        <i class="fas fa-star" data-rating="4"></i>
+                        <i class="fas fa-star" data-rating="5"></i>
+                    </div>
+                    <input type="hidden" id="rating-value" value="5">
+                </div>
+                <div class="form-group">
+                    <label for="reviewer-name">Full Name</label>
+                    <input type="text" id="reviewer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="review-comment">Comment (Optional)</label>
+                    <textarea id="review-comment" rows="4" placeholder="Share your thoughts about this product"></textarea>
+                </div>
+                <div class="form-error" id="review-error"></div>
+                <div class="modal-actions">
+                    <button type="button" id="cancel-review" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Submit Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <div class="form-error" id="login-error"></div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-error" id="register-error"></div>
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Online Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+    <script src="cart.js"></script>
+    <script src="reviews.js"></script>
+    <script src="product-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+/* src/app/home/home.component.css */
+.fairy-home {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.hero-image .image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.hero-image .image-frame:hover img {
+  transform: scale(1.05);
+}
+
+
+.fairy-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(138, 92, 245, 0.1), transparent 70%),
+              radial-gradient(circle at bottom left, rgba(255, 158, 224, 0.1), transparent 70%);
+  z-index: 0;
+}
+
+.fairy-home .container {
+  position: relative;
+  z-index: 1;
+}
+
+.fairy-home .hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.fairy-home .hero-text h1 {
+  font-size: 3.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.fairy-home .hero-text h1 .highlight {
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.fairy-home .hero-text h1 .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--accent-color);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.fairy-home .hero-text h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.fairy-home .hero-text p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.fairy-home .hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.fairy-home .hero-image .image-frame {
+  position: relative;
+  padding: 15px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.fairy-home .hero-image .image-frame img {
+  width: 100%;
+  border-radius: 5px;
+  display: block;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration::before,
+.fairy-home .hero-image .image-frame .frame-decoration::after {
+  content: '';
+  position: absolute;
+  background: var(--accent-color);
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.top-left {
+  top: 0;
+  left: 0;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.top-left::before {
+  top: 10px;
+  left: 0;
+  width: 3px;
+  height: 20px;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.top-left::after {
+  top: 0;
+  left: 10px;
+  width: 20px;
+  height: 3px;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.top-right {
+  top: 0;
+  right: 0;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.top-right::before {
+  top: 10px;
+  right: 0;
+  width: 3px;
+  height: 20px;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.top-right::after {
+  top: 0;
+  right: 10px;
+  width: 20px;
+  height: 3px;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.bottom-left::before {
+  bottom: 10px;
+  left: 0;
+  width: 3px;
+  height: 20px;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.bottom-left::after {
+  bottom: 0;
+  left: 10px;
+  width: 20px;
+  height: 3px;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.bottom-right::before {
+  bottom: 10px;
+  right: 0;
+  width: 3px;
+  height: 20px;
+}
+
+.fairy-home .hero-image .image-frame .frame-decoration.bottom-right::after {
+  bottom: 0;
+  right: 10px;
+  width: 20px;
+  height: 3px;
+}
+
+.fairy-home .section-subtitle {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.fairy-home .section-subtitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 10px auto;
+  box-shadow: 0 0 10px var(--accent-color);
+}
+
+.fairy-home .skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.fairy-home .skills-container .skill-card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.fairy-home .skills-container .skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(138, 92, 245, 0.25);
+}
+
+.fairy-home .skills-container .skill-card .skill-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.fairy-home .skills-container .skill-card h4 {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.fairy-home .skills-container .skill-card p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.fairy-home .sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.fairy-home .sparkles .sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 0 10px 2px var(--gold);
+  opacity: 0;
+  animation: sparkle-animation 4s infinite;
+}
+
+@media (max-width: 992px) {
+  .fairy-home .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .fairy-home .hero-buttons {
+    justify-content: center;
+  }
+  
+  .fairy-home .hero-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .fairy-home .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  
+  .fairy-home .hero-text h2 {
+    font-size: 1.5rem;
+  }
+  
+  .fairy-home .hero-text p {
+    font-size: 1rem;
+  }
+  
+  .fairy-home .skills-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,311 @@
+.fairy-contact {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.fairy-contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at bottom left, rgba(138, 92, 245, 0.1), transparent 70%),
+              radial-gradient(circle at top right, rgba(255, 158, 224, 0.1), transparent 70%);
+  z-index: 0;
+}
+
+.fairy-contact .container {
+  position: relative;
+  z-index: 1;
+}
+
+.fairy-contact .contact-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fairy-contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fairy-contact .contact-info .info-card {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.fairy-contact .contact-info .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(138, 92, 245, 0.2);
+}
+
+.fairy-contact .contact-info .info-card .info-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+.fairy-contact .contact-info .info-card .info-details h3 {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.3rem;
+}
+
+.fairy-contact .contact-info .info-card .info-details p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.fairy-contact .contact-info .social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.fairy-contact .contact-info .social-links .social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.fairy-contact .contact-info .social-links .social-link:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--white);
+}
+
+.fairy-contact .contact-form-container {
+  background: var(--white);
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.fairy-contact .contact-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  opacity: 0.1;
+  border-radius: 0 0 0 100%;
+}
+
+.fairy-contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fairy-contact .contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fairy-contact .contact-form .form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.fairy-contact .contact-form .form-group input,
+.fairy-contact .contact-form .form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--light-color);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.fairy-contact .contact-form .form-group input:focus,
+.fairy-contact .contact-form .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(138, 92, 245, 0.2);
+}
+
+.fairy-contact .contact-form .form-group input.error,
+.fairy-contact .contact-form .form-group textarea.error {
+  border-color: #ff6b6b;
+}
+
+.fairy-contact .contact-form .error-message {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+}
+
+.fairy-contact .contact-form .submit-btn {
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+.fairy-contact .contact-form .submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.fairy-contact .contact-form .form-message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fairy-contact .contact-form .form-message.success {
+  background-color: rgba(46, 213, 115, 0.1);
+  color: #2ed573;
+}
+
+.fairy-contact .contact-form .form-message.error {
+  background-color: rgba(255, 107, 107, 0.1);
+  color: #ff6b6b;
+}
+
+.fairy-contact .fairy-dust {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.fairy-contact .fairy-dust .dust-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 0 10px 2px var(--gold);
+  opacity: 0;
+  animation: dust-animation 6s infinite;
+}
+
+.fairy-contact .fairy-dust .dust-particle.p1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.fairy-contact .fairy-dust .dust-particle.p2 {
+  top: 60%;
+  left: 5%;
+  animation-delay: 1s;
+}
+
+.fairy-contact .fairy-dust .dust-particle.p3 {
+  top: 30%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.fairy-contact .fairy-dust .dust-particle.p4 {
+  bottom: 20%;
+  right: 5%;
+  animation-delay: 3s;
+}
+
+.fairy-contact .fairy-dust .dust-particle.p5 {
+  top: 40%;
+  left: 50%;
+  animation-delay: 4s;
+}
+
+.fairy-contact .fairy-dust .dust-particle.p6 {
+  bottom: 40%;
+  left: 20%;
+  animation-delay: 5s;
+}
+
+@keyframes dust-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0);
+  }
+}
+
+.magical-element {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  box-shadow: 0 0 15px var(--accent-color);
+  animation: magical-float 8s infinite ease-in-out;
+}
+
+@keyframes magical-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.5);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .fairy-contact .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .fairy-contact .contact-info {
+    order: 2;
+  }
+  
+  .fairy-contact .contact-form-container {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .fairy-contact .contact-form-container {
+    padding: 1.5rem;
+  }
+}

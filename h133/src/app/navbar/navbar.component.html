@@ -1,0 +1,7 @@
+<nav>
+  <h1>Restaurant</h1>
+  <ul>
+    <li routerLink="/">Home</li>
+    <li routerLink="/cart">Cart <span *ngIf="cartCount > 0">({{ cartCount }})</span></li>
+  </ul>
+</nav>

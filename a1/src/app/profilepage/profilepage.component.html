@@ -1,0 +1,18 @@
+<button (click)="myInfo()" class="userBtn">PROFILE INFO</button>
+
+<div *ngIf="userInfo" class="profile-info">
+  <h2 class="profile-title"><i class="fas fa-user-circle"></i> User Profile</h2>
+  <div class="profile-avatar">
+    <img *ngIf="userInfo.avatar" [src]="userInfo.avatar" alt="Avatar">
+  </div>
+  <div class="profile-details">
+    <div class="profile-row"><span>First Name:</span> <b>{{ userInfo.firstName }}</b></div>
+    <div class="profile-row"><span>Last Name:</span> <b>{{ userInfo.lastName }}</b></div>
+    <div class="profile-row"><span>Age:</span> <b>{{ userInfo.age }}</b></div>
+    <div class="profile-row"><span>Email:</span> <b>{{ userInfo.email }}</b></div>
+    <div class="profile-row"><span>Phone:</span> <b>{{ userInfo.phone }}</b></div>
+    <div class="profile-row"><span>Address:</span> <b>{{ userInfo.address }}</b></div>
+    <div class="profile-row"><span>ZIP:</span> <b>{{ userInfo.zipcode }}</b></div>
+    <div class="profile-row"><span>Gender:</span> <b>{{ userInfo.gender }}</b></div>
+  </div>
+</div>

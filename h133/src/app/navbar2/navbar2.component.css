@@ -1,0 +1,52 @@
+/* Navbar Container */
+ul {
+    margin-top: 605px;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-color: #b22222; /* Firebrick Red */
+  padding: 10px 20px;
+  
+  border-bottom: 3px solid #8b0000; /* Dark Red */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Items */
+ul li {
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+ul li:hover {
+  background-color: #8b0000; /* Dark Red */
+  transform: scale(1.1);
+}
+
+/* Active Item */
+ul li.active {
+  background-color: #ff4500; /* Orange Red */
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}

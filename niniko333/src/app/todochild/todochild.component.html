@@ -1,0 +1,9 @@
+<div class="fairy-tale-container">
+  <ul class="fairy-tale-list">
+    @for (item of childList; track $index) {
+    <li class="fairy-tale-item">
+      <span class="fairy-tale-text">{{ item }}</span>
+      <button class="fairy-tale-button" (click)="delete(item.index)">Delete</button>
+    </li>}
+  </ul>
+</div>

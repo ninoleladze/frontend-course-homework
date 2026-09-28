@@ -1,0 +1,23 @@
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px
+    ;
+}
+.card img{
+    height: 200px;
+    object-fit: cover;
+}
+.antebuli{
+    box-shadow: 0 0 20px 3px green;
+    transition: 0.5s;
+
+}
+.antebuli:hover{
+    transform: scale(1.1);
+}
+.gawitlebuli{
+    box-shadow: 0 0 20px 3px red;
+    
+}

@@ -1,0 +1,61 @@
+<div class="cart-container">
+  <h1>Your Shopping Cart</h1>
+
+  <div *ngIf="loading" class="loading">
+    <p>Loading your cart...</p>
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    <p>There was an error loading your cart. Please try again later.</p>
+  </div>
+
+  <div *ngIf="isEmpty && !loading && !error" class="empty-cart">
+    <p>Your cart is empty.</p>
+    <a routerLink="/" class="continue-shopping">Continue Shopping</a>
+  </div>
+
+  <div *ngIf="!isEmpty && !loading && !error" class="cart-content">
+    <div class="cart-items">
+      <div *ngFor="let item of cartList" class="cart-item">
+        <div class="item-image">
+          <img [src]="item.product.image || 'assets/placeholder.png'" [alt]="item.product.name">
+        </div>
+        
+        <div class="item-details">
+          <h3>{{ item.product.name }}</h3>
+          <p class="item-price">${{ item.product.price }}</p>
+        </div>
+        
+        <div class="quantity-controls">
+          <button (click)="decrease(item)" class="quantity-btn">-</button>
+          <span class="quantity">{{ item.quantity }}</span>
+          <button (click)="increase(item)" class="quantity-btn">+</button>
+        </div>
+        
+        <div class="item-total">
+          ${{ item.product.price * item.quantity | number:'1.2-2' }}
+        </div>
+        
+        <button (click)="deleteItem(item.product.id)" class="remove-btn">Remove</button>
+      </div>
+    </div>
+    
+    <div class="cart-summary">
+      <h2>Order Summary</h2>
+      <div class="summary-row">
+        <span>Subtotal:</span>
+        <span>${{ getTotal() | number:'1.2-2' }}</span>
+      </div>
+      <div class="summary-row">
+        <span>Shipping:</span>
+        <span>Free</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total:</span>
+        <span>${{ getTotal() | number:'1.2-2' }}</span>
+      </div>
+      <button (click)="checkout()" class="checkout-btn">Proceed to Checkout</button>
+      <a routerLink="/" class="continue-shopping">Continue Shopping</a>
+    </div>
+  </div>
+</div>

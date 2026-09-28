@@ -1,0 +1,14 @@
+<div class="todo-parent">
+    <h1>To-Do List</h1>
+    <form (submit)="addTodo()">
+        <input type="text" [(ngModel)]="newTodo" placeholder="Add a new todo" required />
+        <button type="submit">Add</button>
+    </form>
+    <div class="todo-list">
+        <app-todoitem 
+            *ngFor="let todo of todos" 
+            [todo]="todo" 
+            (remove)="removeTodo(todo.id)">
+        </app-todoitem>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #ffe6f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 2px #ff80ab;
+}

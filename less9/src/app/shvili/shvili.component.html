@@ -1,0 +1,15 @@
+<p>shvili works!</p>
+<button (click)="sendData()">SEND TO PARENT</button>
+<h1>{{rameSaxeli}}</h1>
+
+<button (click)="sendTruckData()">Send Truck</button>
+<h1>{{gvari}}</h1>
+
+
+
+@for (item of ferebiMassiv; track $index) {
+    <button [style.backgroundColor]="item">{{item}}</button>
+}
+
+
+

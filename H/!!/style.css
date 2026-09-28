@@ -1,0 +1,159 @@
+
+.fornav{
+    display: flex;
+    gap: 20px;
+}
+
+nav{
+    background-color: #F6F8F9;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 99999;
+}
+
+.nvm{
+    font-size: 12px;
+    margin-left: 50px;
+    
+}
+
+ul{
+    display: flex;
+    gap:30px;
+    position: absolute;
+    right: 300px;
+    top: 30px;
+}
+
+li{
+    list-style-type: none;
+}
+
+.leftside{
+    margin-left: 390px;
+}
+
+.thing{
+    width: 35px;
+    height: 2.5px;
+    background-color: black;
+    margin-left: 400px;
+    margin-top: 100px;
+}
+
+.about1 h1{
+    margin-left: 400px;
+    width: 40px;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.about1 p{
+    width: 300px;
+    margin-left: 400px;
+    color: gray;
+    font-weight: bold;
+}
+
+.right1 img{
+    height: 462px;
+    width: 100%;
+    margin-left: 80px;
+}
+
+.about1{
+    display: flex;
+}
+
+
+.thing2{
+    width: 30px;
+    height: 1.5px;
+    background-color: black;
+    position: absolute;
+    bottom: 20px;
+    z-index: 888;
+    left: 305px;
+    font-weight: bold;
+    top: 10px;
+    left: 0;
+}
+
+form{
+    background-color: #57BBBF;
+    width: 100%;
+    
+}
+
+.btn button{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 9px 0px;
+    position:relative;
+    width: 100px;
+    margin-left: 400px;
+}
+
+.btn{
+    margin-bottom: 50px;
+}
+
+
+
+.left2{
+    left:300px ;
+    padding-bottom: 100px;
+    width: 50%;
+    position: absolute;
+    top: 40px;
+}
+
+
+.icon{
+    display: flex;
+    gap: 10px;
+}
+
+.container{
+    background-color: #57BBBF;
+    display: flex;
+    position: relative;
+    height:600px ;
+}
+
+.main input{
+    background-color: transparent;
+    border: solid 2px black;
+    width: 423px;
+    height: 25px;
+}
+
+.main{
+    background-color: #57BBBF;
+    left:900px;
+    position: absolute;
+    top: 40px;
+}
+
+
+.main textarea{
+    background-color:transparent ;
+    border: solid 2px black;
+}
+
+.btn2 {
+    right:0px;
+    position: absolute;
+    top: 460px;
+}
+
+.btn2 button{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border:none ;
+    padding: 9px 55px;
+}

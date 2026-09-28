@@ -1,0 +1,18 @@
+
+/* Layout */
+@keyframes magicalBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: linear-gradient(120deg, #191a49, #2a2c70, #14121c, #2a2c70);
+  background-size: 300% 300%;
+  animation: magicalBackground 25s ease infinite;
+  padding: 2rem 1rem; /* Adjust padding for better responsiveness */
+}

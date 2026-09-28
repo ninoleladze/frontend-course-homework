@@ -1,0 +1,21 @@
+form {
+  box-shadow: 0 8px 20px rgba(255, 111, 145, 0.3);
+  width: 350px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #ffe4ec;
+  border-radius: 15px;
+  margin: auto;
+  text-align: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  align-self: center;
+}

@@ -1,0 +1,74 @@
+<div class="home-container">
+  <app-carousel></app-carousel>
+  
+  <div class="content-container">
+    <aside class="sidebar">
+      <div class="categories">
+        <h3>Categories</h3>
+        <ul>
+          <li (click)="showProducts()">All Products</li>
+          <li *ngFor="let category of categories" 
+              (click)="showByCategory(category.id, 1)"
+              [class.active]="isCategoryShown && currentCategory === category.id">
+            {{ category.name }}
+          </li>
+        </ul>
+      </div>
+      
+      <app-filter (filterChanged)="handleFilterResults($event)"></app-filter>
+    </aside>
+    
+    <main class="products-container">
+      <div *ngIf="loading" class="loading">
+        <p>Loading products...</p>
+      </div>
+      
+      <div *ngIf="!loading" class="products-grid">
+        <div *ngFor="let product of products.products" class="product-card" [routerLink]="['/product', product._id || product.id]">
+          <div class="product-image">
+            <img [src]="product.image" [alt]="product.name">
+          </div>
+          
+          <div class="product-info">
+            <h3>{{ product.name }}</h3>
+            <div class="price">
+              <span class="current">${{ product.price.current }}</span>
+              <span class="original" *ngIf="product.price.original">${{ product.price.original }}</span>
+            </div>
+            
+            <div class="rating" *ngIf="product.rating">
+              <span>{{ product.rating }} ⭐</span>
+            </div>
+            
+            <button 
+              (click)="addToCart(product, $event)" 
+              class="add-to-cart-btn"
+              [class.disabled]="!authService.isLoggedIn()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="addedToCart" class="notification success">
+        Product added to cart successfully!
+      </div>
+      
+      <div *ngIf="authError" class="notification error">
+        Please sign in to add items to cart
+      </div>
+      
+      <div class="pagination" *ngIf="pageList.length > 1">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+        <span *ngFor="let page of pageList" 
+              [class.active]="currentPage === page"
+              (click)="isCategoryShown ? showByCategory(currentCategory, page) : showProducts(page)">
+          {{ page }}
+        </span>
+        <button (click)="nextPage()" [disabled]="currentPage === pageList.length">Next</button>
+      </div>
+    </main>
+  </div>
+  
+  <app-informationside></app-informationside>
+</div>

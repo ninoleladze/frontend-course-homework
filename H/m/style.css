@@ -1,0 +1,22 @@
+.container{
+    width: 700px;
+    background-color: aqua;
+    position: relative;
+    border: 5px black solid;
+    padding: 20px;
+}
+
+.target{
+    background-color: blue;
+    width: 100px;
+    height: 60px;
+    border-radius: 20px;
+    border: black solid 5px;
+    position: absolute;
+    top: 0;
+    right: 0%;
+align-items: center;
+justify-content: center;
+display: flex;
+   
+}

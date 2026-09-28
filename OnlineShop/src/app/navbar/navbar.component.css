@@ -1,0 +1,118 @@
+.custom-navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #14121c 70%, #191a49 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2.5rem;
+  box-shadow: 0 2px 12px #14121c33;
+  border-bottom: 2px solid #64698d55;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 100px;
+}
+
+.navbar-brand-area .navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar-brand-area .navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  color: #bfc2e2;
+  font-size: 1.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.4rem 1.1rem;
+  border-radius: 0.5rem;
+  transition: background 0.18s, color 0.18s;
+  display: inline-block;
+}
+
+
+
+.dropdown-toggle {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  background: #191a49;
+  border-radius: 0.7rem;
+  box-shadow: 0 4px 16px #14121c55;
+  min-width: 160px;
+  padding: 0.5rem 0;
+  z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1.2rem;
+  color: #bfc2e2;
+  font-size: 1rem;
+  border-radius: 0;
+  background: none;
+  transition: background 0.16s, color 0.16s;
+}
+
+.dropdown-menu a:hover {
+  background: #64698d;
+  color: #fff;
+}
+
+.dropdown-menu hr {
+  border: none;
+  border-top: 1px solid #64698d55;
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 700px) {
+  .custom-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+  }
+  .navbar-links {
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}

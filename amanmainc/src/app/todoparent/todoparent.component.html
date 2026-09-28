@@ -1,0 +1,5 @@
+<div class="card">
+  <input type="text" [(ngModel)]="inputText">
+  <button (click)="addData()">ADD</button>
+  <app-todochild [childList]="todoList" (deleteItem)="deleteData($event)"></app-todochild>
+</div>

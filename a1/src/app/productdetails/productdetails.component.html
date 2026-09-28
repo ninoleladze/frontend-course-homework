@@ -1,0 +1,46 @@
+<div class="product-details-container" *ngIf="!loading && adddetails; else loadingTpl">
+  <div class="product-details-card">
+    <img [src]="adddetails.thumbnail || adddetails.images?.[0]" [alt]="adddetails.title" class="product-image">
+    <div class="product-info">
+      <h2>{{ adddetails.title }}</h2>
+      <h4>{{ adddetails.brand | titlecase }}</h4>
+      <div class="product-rating">
+        <ng-container *ngFor="let star of [1,2,3,4,5]">
+          <span class="star" [class.filled]="adddetails.rating >= star">★</span>
+        </ng-container>
+        <span class="rating-number">{{ adddetails.rating | number:'1.1-1' }}</span>
+      </div>
+      <div class="product-price">
+        <span class="current">${{ adddetails.price?.current }}</span>
+        <span *ngIf="adddetails.price?.discountPercentage > 0" class="before">${{ adddetails.price?.beforeDiscount }}</span>
+        <span *ngIf="adddetails.price?.discountPercentage > 0" class="discount">-{{ adddetails.price?.discountPercentage }}%</span>
+      </div>
+      <div class="product-stock">
+        <span>Stock: {{ adddetails.stock }}</span>
+        <span>Warranty: {{ adddetails.warranty }} year(s)</span>
+      </div>
+      <div class="product-category">
+        <span>Category: {{ adddetails.category?.name || adddetails.category | titlecase }}</span>
+      </div>
+      <p class="product-description">{{ adddetails.description }}</p>
+      <div class="product-gallery" *ngIf="adddetails.images?.length">
+        <span *ngFor="let img of adddetails.images">
+          <img [src]="img" [alt]="adddetails.title" class="gallery-img">
+        </span>
+      </div>
+     <button class="bounce-on-hover" [disabled]="adddetails.stock === 0" (click)="addToCart()">
+    <ng-container *ngIf="adddetails.stock === 0; else addCart">
+      <span class="out-of-stock-icon">⛔</span> Out of Stock
+    </ng-container>
+    <ng-template #addCart>
+      Add To Cart
+    </ng-template>
+  </button>
+  </div>
+  </div>
+</div>
+<ng-template #loadingTpl>
+  <div class="loading-details">Loading product details...</div>
+</ng-template>
+
+<app-footer></app-footer>

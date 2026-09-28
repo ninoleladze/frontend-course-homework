@@ -1,0 +1,6 @@
+.card {
+    width: fit-content;
+    min-height: 100px;
+    background-color: chocolate;
+    padding: 10px;
+}

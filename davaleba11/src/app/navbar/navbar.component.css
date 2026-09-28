@@ -1,0 +1,24 @@
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to right, #ff6f91, #ff8eaa);
+  padding: 15px;
+  margin: 0;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+li {
+  margin: 0 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+  color: #ffe4ec;
+  transform: scale(1.1);
+}

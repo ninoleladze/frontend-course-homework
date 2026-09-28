@@ -1,0 +1,7 @@
+<p>details works!</p>
+<h1>{{roomInfo.name}}</h1>
+<img [src]="roomInfo.images[0].source" alt="">
+
+@for (item of roomInfo.images; track $index) {
+    <img width="60" [src]="item.source" alt="">
+}

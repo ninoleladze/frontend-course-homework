@@ -1,0 +1,51 @@
+<div class="filter-rect">
+  <div class="brands">
+    <h2>Brands</h2>
+    <ul>
+      <li [class.activedBrand]="activeBrand == 'All'" (click)="selectBrand('All')">
+        <i class="fa-solid fa-tag"></i>All
+      </li>
+      <li *ngFor="let item of brands" [class.activedBrand]="item == activeBrand" (click)="selectBrand(item)">
+        <i class="fa-solid fa-tag"></i>{{ item }}
+      </li>
+    </ul>
+  </div>
+  <div class="search">
+    <span class="material-symbols-outlined">manage_search</span>
+    <input
+      (keyup.enter)="filterData()"
+      type="search"
+      placeholder="Search here..."
+      [(ngModel)]="searchText"
+    />
+  </div>
+  <div class="prices">
+    <h4>Select price:</h4>
+    <input type="number" placeholder="from" [(ngModel)]="min" min="1"/>
+    <input type="number" placeholder="to" [(ngModel)]="max" min="1"/>
+  </div>
+  <div class="rating">
+    <h4>Rating:</h4>
+    <input type="number" placeholder="0" max="5" min="0" [(ngModel)]="rating"/>
+  </div>
+  <div class="sort">
+    <select [(ngModel)]="type">
+      <option value="">Choose Type</option>
+      <option value="rating">Rating</option>
+      <option value="price">Price</option>
+      <option value="issue_date">Issue Date</option>
+      <option value="title">Title</option>
+    </select>
+    <select [(ngModel)]="sort">
+      <option value="">Sort Direction</option>
+      <option value="asc">Ascend</option>
+      <option value="desc">Descend</option>
+    </select>
+  </div>
+  <button class="filter-btn" (click)="filterData()">
+    <i class="fa fa-filter" style="margin-right: 0.5rem;"></i> Filter
+  </button>
+  <button class="filter-btn" style="background:#6c757d;color:#fff;" (click)="resetFilter()">
+    <i class="fa fa-times" style="margin-right: 0.5rem;"></i> Reset
+  </button>
+</div>

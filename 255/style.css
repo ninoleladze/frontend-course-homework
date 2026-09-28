@@ -1,0 +1,25 @@
+body { font-family: Arial, sans-serif;
+     display: flex; 
+     justify-content: center;
+      align-items: center; 
+      height: 100vh;
+       background-color: #dfacb3; }
+.container { background: #fff0f5;
+    padding: 20px;
+     border-radius: 10px;
+     width: 300px; }
+input { width: 100%;
+     padding: 8px; 
+     margin: 5px 0;
+     border: 1px solid #ff69b4; 
+     border-radius: 5px;
+      background: #ffe4e1; }
+.error { color: red; 
+    font-size: 12px; }
+button { width: 317px; 
+    padding: 10px; 
+    background: #ff1493; 
+    color: white;
+     border: none; 
+     border-radius: 5px; 
+     cursor: pointer; }

@@ -1,0 +1,15 @@
+.cart {
+    box-shadow: 0 0 20px 2px goldenrod;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 40px;
+    align-items: center;
+    margin-top: 15px;
+    
+}
+
+.cart h3 {
+    font-size: 14px;
+    width: 200px;
+}

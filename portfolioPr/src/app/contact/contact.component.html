@@ -1,0 +1,135 @@
+<!-- src/app/contact/contact.component.html -->
+<section class="fairy-contact">
+  <div class="container contact-container">
+    <h2 class="section-title">Send Me a Message</h2>
+    
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="info-details">
+            <h3>Email</h3>
+            <p>nino.leladze&#64;gmail.com</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="info-details">
+            <h3>Location</h3>
+            <p>Tbilisi, Georgia</p>
+          </div>
+        </div>
+        
+        <!-- Rest of the contact component HTML remains the same -->
+
+        
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://twitter.com/" target="_blank" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://instagram.com/" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-form-container">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              formControlName="name" 
+              [class.error]="nameError && contactForm.get('name')?.touched"
+            >
+            <div class="error-message" *ngIf="nameError && contactForm.get('name')?.touched">
+              {{ nameError }}
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email"
+              [class.error]="emailError && contactForm.get('email')?.touched"
+            >
+            <div class="error-message" *ngIf="emailError && contactForm.get('email')?.touched">
+              {{ emailError }}
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input 
+              type="text" 
+              id="subject" 
+              formControlName="subject"
+              [class.error]="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched"
+            >
+            <div class="error-message" *ngIf="contactForm.get('subject')?.invalid && contactForm.get('subject')?.touched">
+              Subject is required
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea 
+              id="message" 
+              formControlName="message" 
+              rows="5"
+              [class.error]="messageError && contactForm.get('message')?.touched"
+            ></textarea>
+            <div class="error-message" *ngIf="messageError && contactForm.get('message')?.touched">
+              {{ messageError }}
+            </div>
+          </div>
+          
+          <button 
+            type="submit" 
+            class="btn btn-primary submit-btn" 
+            [disabled]="isSubmitting || contactForm.invalid"
+          >
+            <span *ngIf="!isSubmitting">Send Message</span>
+            <span *ngIf="isSubmitting">
+              <i class="fas fa-spinner fa-spin"></i> Sending...
+            </span>
+          </button>
+          
+          <div class="form-message success" *ngIf="submitSuccess">
+            <i class="fas fa-check-circle"></i>
+            Your message has been sent successfully!
+          </div>
+          
+          <div class="form-message error" *ngIf="submitError">
+            <i class="fas fa-exclamation-circle"></i>
+            There was an error sending your message. Please try again.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Magical elements -->
+  <div class="fairy-dust">
+    <div class="dust-particle p1"></div>
+    <div class="dust-particle p2"></div>
+    <div class="dust-particle p3"></div>
+    <div class="dust-particle p4"></div>
+    <div class="dust-particle p5"></div>
+    <div class="dust-particle p6"></div>
+  </div>
+</section>

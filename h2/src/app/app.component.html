@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+  
+  <div class="card-container">
+    <div class="card" *ngFor="let student of students">
+      <div class="card-header">
+        <img [src]="student.photo" alt="{{ student.name }}" class="student-photo">
+        <h2>{{ student.name }}</h2>
+      </div>
+      <div class="card-body">
+        <p><strong>ასაკი:</strong> {{ student.age }}</p>
+        <p><strong>კურსი:</strong> {{ student.courseType }}</p>
+        <p>
+          <strong>დასწრება:</strong> 
+          <span *ngIf="student.attendance === 100" class="successful">წარმატებული</span>
+          <span *ngIf="student.attendance !== 100">{{ student.attendance }}%</span>
+        </p>
+        <p *ngIf="student.scholarship" class="scholarship">სტიპენდიანტი</p>
+      </div>
+    </div>
+  </div>
+</div>

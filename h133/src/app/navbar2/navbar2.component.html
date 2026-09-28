@@ -1,0 +1,6 @@
+<ul>
+    <li [class.active]="activeCatory == 0" (click)="GetAllProducts()">All</li>
+    @for (item of categories; track $index) {
+        <li [class.active]="item.id == activeCatory" (click)="filterByCategory(item.id)">{{item.name}}</li>
+    }
+</ul>

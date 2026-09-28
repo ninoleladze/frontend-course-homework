@@ -1,0 +1,8 @@
+.cart {
+    box-shadow: 0 0 20px 2px grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 30px;
+}

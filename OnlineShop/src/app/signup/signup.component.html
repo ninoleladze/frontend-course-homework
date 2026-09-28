@@ -1,0 +1,50 @@
+<form [formGroup]="formInfo" (ngSubmit)="register()" class="signup-form">
+  <h2 class="form-title">Sign Up</h2>
+  <div class="field">
+    <label for="firstName">First Name</label>
+    <input type="text" formControlName="firstName" id="firstName" required>
+  </div>
+  <div class="field">
+    <label for="lastName">Last Name</label>
+    <input type="text" formControlName="lastName" id="lastName" required>
+  </div>
+  <div class="field">
+    <label for="age">Age</label>
+    <input type="number" formControlName="age" id="age" required>
+  </div>
+  <div class="field">
+    <label for="email">Email</label>
+    <input type="email" formControlName="email" id="email" required>
+  </div>
+  <div class="field">
+    <label for="password">Password</label>
+    <input type="password" formControlName="password" id="password" required>
+  </div>
+  <div class="field">
+    <label for="phone">Phone</label>
+    <input type="text" formControlName="phone" id="phone">
+  </div>
+  <div class="field">
+    <label for="address">Address</label>
+    <input type="text" formControlName="address" id="address">
+  </div>
+  <div class="field">
+    <label for="zipcode">ZIP</label>
+    <input type="text" formControlName="zipcode" id="zipcode">
+  </div>
+  <div class="field">
+    <label for="avatar">Avatar</label>
+    <input type="text" formControlName="avatar" id="avatar">
+  </div>
+  <div class="field">
+    <label for="gender">Gender</label>
+    <select formControlName="gender" id="gender">
+      <option value="">Choose a gender</option>
+      <option value="MALE">Male</option>
+      <option value="FEMALE">Female</option>
+      <option value="OTHER">Other</option>
+    </select>
+  </div>
+  <button type="submit" class="btn-signup">Register</button>
+</form>
+<app-footer></app-footer>

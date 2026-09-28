@@ -1,0 +1,151 @@
+
+.cart-section {
+  height: 47vh;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #04889996; 
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow-x: auto; 
+  font-family: 'Arial', sans-serif; 
+}
+
+
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.table th {
+  background-color: #12054d; 
+  color: rgb(0, 194, 201);
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.table td {
+  font-size: 14px;
+  color: #333;
+  font-family: 'Arial', sans-serif; 
+  vertical-align: middle;
+}
+
+.table td:hover {
+  background-color: #ffe6e6; 
+  transition: background-color 0.3s ease;
+}
+
+.img-thumbnail {
+  border: 1px solid #ff4d4d; 
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.1); 
+}
+
+
+.btn-sm {
+  
+  font-size: 12px;
+  padding: 5px 10px;
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; 
+}
+
+.btn-warning {
+  background-color:#ff4d4d; 
+  border: none;
+}
+.mani{
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-warning:hover {
+  background-color: #650072;
+  transform: scale(1.05); 
+}
+
+.btn-success {
+  background-color:#ff4d4d ; 
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: darkred;
+  transform: scale(1.05); 
+}
+
+.btn-danger {
+  
+  
+  background-color: #ff4d4d; 
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #cc0000;
+  transform: scale(1.05); 
+}
+
+
+.alert {
+  font-size: 16px;
+  font-weight: bold;
+  color: #130736;
+  background-color: #fff;
+  border: 4px solid #4dbeff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-family: 'Roboto', sans-serif; 
+}
+
+
+@media (max-width: 768px) {
+  .table th,
+  .table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .img-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btn-sm {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-section {
+    padding: 15px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .btn-sm {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+}

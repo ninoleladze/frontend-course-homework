@@ -1,0 +1,16 @@
+<div class="card fairy-tale-parent">
+  <h1 class="fairy-tale-title">Nini's To-Do List</h1>
+  <div class="fairy-tale-input-container">
+    <input
+      type="text"
+      [(ngModel)]="inputText"
+      class="fairy-tale-input"
+      placeholder="write smt..."
+    />
+    <button (click)="addData()" class="fairy-tale-add-button">ADD</button>
+  </div>
+  <app-todochild
+    [childList]="todoList"
+    (deleteItem)="deleteData($event)"
+  ></app-todochild>
+</div>

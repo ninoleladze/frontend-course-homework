@@ -1,0 +1,37 @@
+.CounterCard {
+    width: 300px;
+    height: 400px;
+    box-shadow: 0 0 20px 2px grey;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.CounterCard h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+.CounterCard button {
+    height: 50px;
+    cursor: pointer;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    box-shadow: 0 0 20px 1px grey;
+}
+
+.card img {
+    width: 100%;
+}
+
+#cardsArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}

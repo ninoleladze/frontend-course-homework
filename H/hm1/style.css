@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+
+.container {
+   background-color: #ebe0e0;
+    padding: 30px 0;
+  
+    
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.titlee {
+    
+    font-size: 14px;
+    color: rgb(124, 107, 107);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+}
+.title{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+ul{
+   margin-right: 150px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    margin-left: 60px;
+}
+
+.background{
+   
+       
+        background-image: url("https://static.wixstatic.com/media/11062b_9de2dbff3dda403b944bb98c41cb5764f000.jpg/v1/fill/w_1470%2Ch_912%2Cal_c%2Cq_85%2Cusm_0.33_1.00_0.00%2Cenc_auto/11062b_9de2dbff3dda403b944bb98c41cb5764f000.jpg");
+      
+       
+        min-height: 500px; 
+      
+       
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100vh;
+        position: relative;
+        top:0px
+}
+    
+.text {
+   
+    position: absolute;
+     top: 300px;
+     left: 750px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(24, 12, 12);
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text h1 {
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.button {
+    padding: 15px 30px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+ 
+}
+
+
+
+.thing{
+    width: 35px;
+    height: 2.5px;
+    background-color: black;
+    margin-left: 400px;
+    margin-top: 100px;
+}
+
+.about1 h1{
+    margin-left: 400px;
+    width: 40px;
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.about1 p{
+    width: 300px;
+    margin-left: 400px;
+    color: gray;
+    font-weight: bold;
+}
+
+.right1 img{
+    height: 462px;
+    width: 100%;
+    margin-left: 80px;
+}
+
+.about1{
+    display: flex;
+}
+
+
+.services {
+    
+    text-align: center;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.service-box {
+    background-color: white;
+    border: 8px solid #000000;
+    padding: 20px;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.service-box span {
+    display: block;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+button {
+    background-color: #000 !important;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #444;
+}
+
+.more-services {
+    margin-top: 20px;
+    background-color: #444;
+}
+
+.more-services:hover {
+    background-color: #444;
+}
+
+
+.thing2{
+    width: 30px;
+    height: 1.5px;
+    background-color: black;
+    position: absolute;
+    bottom: 20px;
+    z-index: 12;
+    left: 305px;
+    font-weight: bold;
+    top: 10px;
+    left: 0;
+}
+
+form{
+    background-color: #57BBBF;
+    width: 100%;
+    
+}
+
+.btn button{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 9px 0px;
+    position:relative;
+    width: 100px;
+    margin-left: 400px;
+}
+
+.btn{
+    margin-bottom: 50px;
+}
+
+
+
+.left2{
+    left:300px ;
+    padding-bottom: 100px;
+    width: 50%;
+    position: absolute;
+    top: 40px;
+}
+
+
+.icon{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.container1 {
+    background-color: #57BBBF;
+    display: flex;
+    position: relative;
+    height:600px ;
+}
+
+.main input{
+    background-color: transparent;
+    border: solid 2px black;
+    width: 423px;
+    height: 25px;
+}
+
+.main{
+    background-color: #57BBBF;
+    left:900px;
+    position: absolute;
+    top: 40px;
+}
+
+
+.main textarea{
+    background-color:transparent ;
+    border: solid 2px black;
+}
+
+.btn2 {
+    right:0px;
+    position: absolute;
+    top: 460px;
+}
+
+.btn2 button{
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border:none ;
+    padding: 9px 55px;
+}

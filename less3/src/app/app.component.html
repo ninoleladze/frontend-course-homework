@@ -1,0 +1,32 @@
+<!-- <h1>{{age}}</h1>
+
+<button (click)="rameLogika()" [disabled]="age < 18">CLICK ME</button>
+
+
+<br>
+
+<input type="text" [(ngModel)]="inputText">
+
+<h3>{{inputText}}</h3>
+
+@for (item of colorList; track $index) {
+  <h2 (click)="deleteItem($index)" [style.color]="item">{{item}}</h2>
+}
+
+@empty {
+  <h2>No Data...</h2>
+}
+
+
+<button (click)="showHide()">{{isShow ? 'HIDE' : 'SHOW'}}</button>
+@if(isShow) {
+  <img width="300" src="https://discuss-cdn.kde.org/uploads/default/original/2X/e/e301cb179b160ec4305a948ca7e3a79921d63952.jpeg" alt="">
+}
+ -->
+
+
+
+
+ <button [disabled]="i == 0"  (click)="wina()">Wina</button>
+ <img class="myImage" [src]="imageList[i]" alt="">
+ <button [disabled]="i == imageList.length - 1" (click)="next()">Shemdegi</button>

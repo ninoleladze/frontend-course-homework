@@ -1,0 +1,15 @@
+<p>about works!</p>
+<h1>{{info}}</h1>
+
+<section>
+    @for (item of cartList; track $index) {
+        <div class="card">
+            <img width="40" [src]="item.product.image" alt="">
+            <p>{{item.product.name}}</p>
+            <h2><button (click)="increase(item)">+</button> {{item.quantity}}  <button>-</button></h2>
+            <h3>{{item.product.price}}$</h3>
+            <h3>Total: {{item.product.price * item.quantity}}$</h3>
+            <button>REMOVE</button>
+        </div>
+    }
+</section>

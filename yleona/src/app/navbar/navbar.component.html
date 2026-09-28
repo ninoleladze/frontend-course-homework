@@ -1,0 +1,28 @@
+<nav class="custom-navbar">
+  <div class="navbar-brand-area">
+    <a class="navbar-brand" routerLink="/"> OnlineShop</a>
+  </div>
+  <ul class="navbar-links">
+    <li><a class="nav-home" routerLink="/" routerLinkActive="active">Home</a></li>
+    <li><a class="nav-cart" routerLink="/cart" routerLinkActive="active">Cart</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle nav-account" tabindex="0">Account <span>▼</span></a>
+      <ul class="dropdown-menu">
+     <!-- Add this to your navbar template -->
+<div class="auth-links">
+  <ng-container *ngIf="!authService.isLoggedIn()">
+    <a routerLink="/login">Sign In</a>
+    <a routerLink="/register">Sign Up</a>
+  </ng-container>
+  
+  <ng-container *ngIf="authService.isLoggedIn()">
+    <a routerLink="/profile">My Profile</a>
+    <a routerLink="/cart">Cart</a>
+    <a (click)="logout()" style="cursor: pointer;">Logout</a>
+  </ng-container>
+</div>
+
+      </ul>
+    </li>
+  </ul>
+</nav>

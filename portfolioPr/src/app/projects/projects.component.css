@@ -1,0 +1,263 @@
+.fairy-projects {
+  padding: 8rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.fairy-projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(138, 92, 245, 0.1), transparent 70%),
+              radial-gradient(circle at bottom right, rgba(255, 158, 224, 0.1), transparent 70%);
+  z-index: 0;
+}
+
+.fairy-projects .container {
+  position: relative;
+  z-index: 1;
+}
+
+.fairy-projects .projects-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.fairy-projects .projects-filter .filter-btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--white);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.fairy-projects .projects-filter .filter-btn:hover {
+  transform: translateY(-3px);
+}
+
+.fairy-projects .projects-filter .filter-btn.active {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--white);
+}
+
+.fairy-projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.fairy-projects .projects-grid .project-card {
+  background: var(--white);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.fairy-projects .projects-grid .project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(138, 92, 245, 0.25);
+}
+
+.fairy-projects .projects-grid .project-card .project-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.fairy-projects .projects-grid .project-card .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.fairy-projects .projects-grid .project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.fairy-projects .projects-grid .project-card .project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(61, 44, 141, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.fairy-projects .projects-grid .project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.fairy-projects .projects-grid .project-card .project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.fairy-projects .projects-grid .project-card .project-links .project-link {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.fairy-projects .projects-grid .project-card .project-links .project-link:hover {
+  transform: translateY(-5px);
+  background: var(--accent-color);
+  color: var(--white);
+}
+
+.fairy-projects .projects-grid .project-card .project-info {
+  padding: 1.5rem;
+}
+
+.fairy-projects .projects-grid .project-card .project-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.fairy-projects .projects-grid .project-card .project-info p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.fairy-projects .projects-grid .project-card .project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.fairy-projects .projects-grid .project-card .project-tech span {
+  padding: 0.3rem 0.8rem;
+  background: var(--light-color);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.fairy-projects .projects-grid .project-card .project-sparkles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.fairy-projects .projects-grid .project-card .project-sparkles .sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 0 10px 2px var(--gold);
+  opacity: 0;
+  animation: sparkle-animation 4s infinite;
+}
+
+.fairy-projects .projects-grid .project-card .project-sparkles .sparkle.s1 {
+  top: 20px;
+  right: 20px;
+  animation-delay: 0s;
+}
+
+.fairy-projects .projects-grid .project-card .project-sparkles .sparkle.s2 {
+  bottom: 40px;
+  left: 15px;
+  animation-delay: 1s;
+}
+
+.fairy-projects .projects-grid .project-card .project-sparkles .sparkle.s3 {
+  bottom: 20px;
+  right: 30px;
+  animation-delay: 2s;
+}
+
+.fairy-projects .floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.fairy-projects .floating-elements .floating-element {
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  opacity: 0.2;
+  animation: float-element 10s infinite ease-in-out;
+}
+
+.fairy-projects .floating-elements .floating-element.e1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.fairy-projects .floating-elements .floating-element.e2 {
+  top: 60%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+.fairy-projects .floating-elements .floating-element.e3 {
+  top: 30%;
+  right: 10%;
+  animation-delay: 4s;
+}
+
+.fairy-projects .floating-elements .floating-element.e4 {
+  bottom: 15%;
+  right: 5%;
+  animation-delay: 6s;
+}
+
+@media (max-width: 992px) {
+  .fairy-projects .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .fairy-projects .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .fairy-projects .projects-filter {
+    gap: 0.5rem;
+  }
+  
+  .fairy-projects .projects-filter .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}

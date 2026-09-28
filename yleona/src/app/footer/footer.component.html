@@ -1,0 +1,113 @@
+<footer>
+<div class="container footer-content">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="footer-title">Shop</h5>
+          <p>Your one-stop destination for all your shopping needs. Discover the best products at the best prices.</p>
+          <div class="social-links mt-4">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="cart">Cart</a></li>
+            <li><a routerLink="login">Login</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-4">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt mr-2"></i> 123 Fashion Street, New York</li>
+            <li><i class="fas fa-phone-alt mr-2"></i> +1 234 567 8901</li>
+            <li><i class="fas fa-envelope mr-2"></i> </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="row footer-bottom">
+        <div class="col-12 text-center">
+          <p class="mb-0">&copy; 2023 Shop. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login to Your Account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger d-none" id="login-error"></div>
+          
+          <form id="login-form">
+            <div class="form-group">
+              <label for="login-email">Email Address</label>
+              <input type="email" class="form-control" id="login-email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input type="password" class="form-control" id="login-password" required autocomplete="current-password">
+
+            </div>
+            
+            <button type="submit" class="btn btn-pink btn-block">Login</button>
+          </form>
+          
+          <div class="text-center mt-3">
+            <p>Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Register</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create an Account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-danger d-none" id="register-error"></div>
+          
+          <form id="register-form">
+            <div class="form-group">
+              <label for="register-name">Full Name</label>
+              <input type="text" class="form-control" id="register-name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="register-email">Email Address</label>
+              <input type="email" class="form-control" id="register-email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="register-password">Password</label>
+              <input type="password" class="form-control" id="register-password" required minlength="6" autocomplete="new-password">
+
+              <small class="form-text text-muted">Password must be at least 6 characters long</small>
+            </div>
+            
+            <button type="submit" class="btn btn-pink btn-block">Register</button>
+          </form>
+          
+          <div class="text-center mt-3">
+            <p>Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login</a></p>
+          </div>
+        </div>
+      </div>
+    </div>

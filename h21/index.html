@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .output {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            margin-top: 15px;
+            min-height: 100px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        
+        .output p {
+            margin: 5px 0;
+        }
+        
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="section">
+            <h2>1.</h2>
+            <p>დააჭირეთ ღილაკს რომ გამოჩნდეს შეტყობინება "წარსულიდან მოსული ტექსტი!" 3 წამის შემდეგ.</p>
+            <button id="alertBtn">შეტყობინების ჩვენება</button>
+        </div>
+        
+        <div class="section">
+            <h2>2. </h2>
+            <p>შეიყვანეთ რიცხვი და თქვენი სახელი, რომ გამოჩნდეს სახელი მითითებული წამeბის შემდდეგ.</p>
+            <input type="number" id="delayInput" placeholder="შეიყვანეთ წამები" min="1">
+            <input type="text" id="nameInput" placeholder="შეიყვანეთ თქვენი სახელი">
+            <button id="logNameBtn">ტაიმერის დაწყება</button>
+            <div class="output" id="nameOutput"></div>
+        </div>
+        
+        <div class="section">
+            <h2>3. </h2>
+            <p>დააჭირეთ ღილაკს, რომ ყოველ წამში გამოჩნდეს შემთხვევითი სახელი მასივიდან 10 წამის განმავლობაში.</p>
+            <button id="randomNamesBtn">შემთხვევითი სახელების დაწყება</button>
+            <div class="output" id="namesOutput"></div>
+        </div>
+        
+        <div class="section">
+            <h2>4. </h2>
+            <p>დააჭირეთ ღილაკს რომ შეიქმნას მასივი რომელიც ყოველ 2 წამში დაამატებს რიცხვებს 20 წამის განმავლობაში.</p>
+            <button id="arrayBtn">მზარდი მასივის დაწყება</button>
+            <div class="output" id="arrayOutput"></div>
+        </div>
+    </div>
+    
+    <script>
+document.getElementById('alertBtn').addEventListener('click', function() {
+    this.disabled = true;
+    setTimeout(() => {
+        alert("წარსულიდან მოსული ტექსტი!");
+        this.disabled = false;
+    }, 3000);
+});
+
+document.getElementById('logNameBtn').addEventListener('click', function() {
+    let seconds = document.getElementById('delayInput').value;
+    let name = document.getElementById('nameInput').value;
+    let output = document.getElementById('nameOutput');
+    
+    output.innerHTML = `<p>ველოდებით ${seconds} წამს...</p>`;
+    
+    setTimeout(() => {
+        output.innerHTML += `<p>სახელი: ${name}</p>`;
+    }, seconds * 1000);
+});
+
+document.getElementById('randomNamesBtn').addEventListener('click', function() {
+    let output = document.getElementById('namesOutput');
+    let names = ["ელენე", "გიორგი", "ლუკა", "საბა"];
+    this.disabled = true;
+    
+    let interval = setInterval(() => {
+        let randomName = names[Math.floor(Math.random() * names.length)];
+        output.innerHTML += `<p>${randomName}</p>`;
+    }, 1000);
+    
+    setTimeout(() => {
+        clearInterval(interval);
+        this.disabled = false;
+    }, 10000);
+});
+
+document.getElementById('arrayBtn').addEventListener('click', function() {
+    let output = document.getElementById('arrayOutput');
+    let array = [];
+    let num = 1;
+    this.disabled = true;
+    
+    let interval = setInterval(() => {
+        array.push(num);
+        output.innerHTML += `<p>მასივი: [${array}]</p>`;
+        num++;
+    }, 2000);
+    
+    setTimeout(() => {
+        clearInterval(interval);
+        this.disabled = false;
+    }, 20000);
+});
+    </script>
+</body>
+</html>

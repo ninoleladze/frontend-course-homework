@@ -1,0 +1,44 @@
+$color: #FE5F0A;
+$font: helvetica;
+$size: 25px;
+$button-color: rgb(255, 173, 10);
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: $color;
+    font-family: $font;
+    h3{
+        color: crimson;
+        font-size: $size;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        ul{
+            display: flex;
+            gap: 50px;
+            list-style: none;
+            a{
+                all: unset;
+            }
+        }
+    }
+}
+
+@mixin button{
+    all: unset;
+    background-color: $button-color;
+    padding: 12px 20px;
+    cursor: pointer;
+    border: 2px solid grey;
+}
+
+button{
+    @include button;
+    &:hover{
+        background-color: grey;
+        opacity: 0.5;
+        transition: 0.7s;
+    }
+}

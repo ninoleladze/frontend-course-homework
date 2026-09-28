@@ -1,0 +1,10 @@
+@for (item of cartList; track $index) {
+    <div class="cart">
+        <img width="30" [src]="item.product.image" alt="">
+        <h4>{{item.product.name}}</h4>
+        <h4><button (click)="increase(item)">+</button> {{item.quantity}} <button [disabled]="item.quantity == 1" (click)="decrease(item)">-</button></h4>
+        <h4>{{item.product.price}}</h4>
+        <h4>{{item.product.price * item.quantity}}</h4>
+        <button (click)="deleteItem(item.product.id)">Remove</button>
+    </div>
+}

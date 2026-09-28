@@ -1,0 +1,17 @@
+.userBtn {
+  display: block;
+  margin: 30px auto;
+  width: 200px;
+  height: 40px;
+  background-color: #ff80ab;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.userBtn:hover {
+  background-color: #ff4081;
+}

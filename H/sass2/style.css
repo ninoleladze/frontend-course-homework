@@ -1,0 +1,130 @@
+.container {
+  margin-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.container img {
+  border-radius: 1000px;
+}
+
+.container .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+
+.container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.container .box a {
+  all: unset;
+}
+
+.container .box .li1 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 120px;
+  height: 120px;
+  background-color: #EEA302;
+  border-radius: 1000px;
+  border: 2px solid black;
+}
+
+.container .box .li2 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 120px;
+  height: 120px;
+  background-color: #FF3B25;
+  border-radius: 1000px;
+  border: 2px solid black;
+}
+
+.container .box .li5 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 120px;
+  height: 120px;
+  background-color: #80D8DA;
+  border-radius: 1000px;
+  border: 2px solid black;
+}
+
+.li1 {
+  all: unset;
+  cursor: pointer;
+}
+
+.li1:hover {
+  background-color: #701818;
+  opacity: 0.5;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+.li2 {
+  all: unset;
+  cursor: pointer;
+}
+
+.li2:hover {
+  background-color: #701818;
+  opacity: 0.5;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+.li5 {
+  all: unset;
+  cursor: pointer;
+}
+
+.li5:hover {
+  background-color: #701818;
+  opacity: 0.5;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+/*# sourceMappingURL=style.css.map */
